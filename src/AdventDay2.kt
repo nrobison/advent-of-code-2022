@@ -12,11 +12,11 @@ class AdventDay2 {
         val inputStream: InputStream = File("resrouces/day_2_input.txt").inputStream()
         var userPointTotal = 0
         inputStream.bufferedReader().forEachLine {
-            var lineSplitBySpace = it.split(" ")
-            val elfsSelection = lineSplitBySpace[0]
+            val lineSplitBySpace = it.split(" ")
+            val elfSelection = lineSplitBySpace[0]
             val userSelection = lineSplitBySpace[1]
             userPointTotal += selectionPointValueFirst[userSelection]!!
-            when (elfsSelection) {
+            when (elfSelection) {
                 "A" -> {
                     if (userSelection == "X") userPointTotal += 3
                     if (userSelection == "Y") userPointTotal += 6
@@ -38,23 +38,25 @@ class AdventDay2 {
     fun secondStrategyGuide(){
         val inputStream: InputStream = File("resrouces/day_2_input.txt").inputStream()
         var userPointTotal = 0
+        var correctSelection = ""
         inputStream.bufferedReader().forEachLine {
-            var lineSplitBySpace = it.split(" ")
-            val elfsSelection = lineSplitBySpace[0]
+            val lineSplitBySpace = it.split(" ")
+            val elfSelection = lineSplitBySpace[0]
             val userShouldSelect = lineSplitBySpace[1]
-            when(elfsSelection){
+
+            when(elfSelection){
                 "A" -> {
-                    var correctSelection = aSelection[userShouldSelect]
+                    correctSelection = aSelection[userShouldSelect]!!
                     userPointTotal += winLoseValues[userShouldSelect]!!
                     userPointTotal += selectionPointValueFirst[correctSelection]!!
                 }
                 "B" ->{
-                    var correctSelection = bSelection[userShouldSelect]
+                    correctSelection = bSelection[userShouldSelect]!!
                     userPointTotal += winLoseValues[userShouldSelect]!!
                     userPointTotal += selectionPointValueFirst[correctSelection]!!
                 }
                 "C" ->{
-                    var correctSelection = cSelection[userShouldSelect]
+                    correctSelection = cSelection[userShouldSelect]!!
                     userPointTotal += winLoseValues[userShouldSelect]!!
                     userPointTotal += selectionPointValueFirst[correctSelection]!!
                 }
