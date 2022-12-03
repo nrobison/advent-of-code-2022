@@ -7,7 +7,7 @@ class AdventDay1 {
         var numberOfHighestCalories = 0
         var currentElfCalories = 0
         var numberOfElves = 1
-        val inputStream: InputStream = File("resrouces/day_1_calories.txt").inputStream()
+        val inputStream: InputStream = File("resources/day_1_calories.txt").inputStream()
         inputStream.bufferedReader().forEachLine {
                 val lineValue = it.toIntOrNull()
                 if(lineValue == null){
@@ -26,7 +26,7 @@ class AdventDay1 {
         println("Number of Highest Calories: $numberOfHighestCalories and number of elves $numberOfElves")
     }
     fun calculateTopThreeCalories() {
-        val inputStream: InputStream = File("resrouces/day_1_calories.txt").inputStream()
+        val inputStream: InputStream = File("resources/day_1_calories.txt").inputStream()
         var currentElfCalories = 0
         var topThree = IntArray(3) { 0 }
         inputStream.bufferedReader().forEachLine {

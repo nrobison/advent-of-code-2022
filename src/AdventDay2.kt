@@ -9,7 +9,7 @@ class AdventDay2 {
     private var cSelection = mapOf(Pair("X","Y"),Pair("Y","Z"),Pair("Z","X"))
 
     fun firstStrategyGuide() {
-        val inputStream: InputStream = File("resrouces/day_2_input.txt").inputStream()
+        val inputStream: InputStream = File("resources/day_2_input.txt").inputStream()
         var userPointTotal = 0
         inputStream.bufferedReader().forEachLine {
             val lineSplitBySpace = it.split(" ")
@@ -36,7 +36,7 @@ class AdventDay2 {
     }
 
     fun secondStrategyGuide(){
-        val inputStream: InputStream = File("resrouces/day_2_input.txt").inputStream()
+        val inputStream: InputStream = File("resources/day_2_input.txt").inputStream()
         var userPointTotal = 0
         var correctSelection = ""
         inputStream.bufferedReader().forEachLine {
