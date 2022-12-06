@@ -8,13 +8,24 @@ class AdventDay5 {
     fun craneMovement(){
         val inputStream : InputStream = File("resources/day_5_crane.txt").inputStream()
         inputStream.bufferedReader().forEachLine {
-            var lineValues = it.split(' ')
+            var lineValues = it.split("\\s+".toRegex())
             var numberToMove = lineValues[1].toInt()
             var moveFrom = lineValues[3].toInt()-1
             var moveTo = lineValues[5].toInt()-1
             moveBoxes(numberToMove,moveFrom,moveTo)
         }
-        inputStream.close()
+        printRows()
+    }
+
+    fun craneCrateMovement9001(){
+        val inputStream : InputStream = File("resources/day_5_crane.txt").inputStream()
+        inputStream.bufferedReader().forEachLine {
+            var lineValues = it.split("\\s+".toRegex())
+            var numberToMove = lineValues[1].toInt()
+            var moveFrom = lineValues[3].toInt()-1
+            var moveTo = lineValues[5].toInt()-1
+            crateMover9001Move(numberToMove,moveFrom,moveTo)
+        }
         printRows()
     }
 
@@ -26,7 +37,12 @@ class AdventDay5 {
     }
 
     private fun crateMover9001Move(numberToMove: Int, moveFrom : Int, moveTo: Int){
-
+        var keepOrder = mutableListOf<String>()
+        for (i in 1..numberToMove){
+            var moving = products[moveFrom].pop()
+            keepOrder.add(0, moving)
+        }
+        products[moveTo].addAll(keepOrder)
     }
 
     private fun printRows(){

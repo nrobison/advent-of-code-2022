@@ -12,9 +12,14 @@ fun main(args : Array<String>){
     dayThree.partTwoRucksacks()
     var dayFour = AdventDay4()
     dayFour.CleanupOverlapOne()
+
     var dayFive = AdventDay5()
     dayFive.buildStacksForAdventChallenge()
     dayFive.craneMovement()
-    //dayFive.clearProductStacks()
+    //Need to clear modified stack
+    dayFive.clearProductStacks()
+    //Build back original stack
+    dayFive.buildStacksForAdventChallenge()
+    dayFive.craneCrateMovement9001()
 }
 
