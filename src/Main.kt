@@ -14,12 +14,12 @@ fun main(args : Array<String>){
     dayFour.CleanupOverlapOne()
 
     var dayFive = AdventDay5()
-    dayFive.buildStacksForAdventChallenge()
+    dayFive.dynamicGenerate()
     dayFive.craneMovement()
     //Need to clear modified stack
     dayFive.clearProductStacks()
     //Build back original stack
-    dayFive.buildStacksForAdventChallenge()
+    dayFive.dynamicGenerate()
     dayFive.craneCrateMovement9001()
 }
 
