@@ -42,7 +42,6 @@ class AdventDay7 {
         var neededSpace = baseDirectorySize - unusedSizeNeeded
         directorySizeNeededToClear =  unusedSizeNeeded - neededSpace
         smallestSizeNeededToMeetRequirements = neededSpace
-        //calcuateIfSizeIsSmaller(baseDirectory.calculateSize()
         for(directories in baseDirectory.subDirectories){
             directorySizeDifference(directories)
         }
@@ -52,14 +51,14 @@ class AdventDay7 {
     private fun directorySizeDifference(directory : AdventDay7Directory){
         var sizeOfDirectory = directory.calculateSize()
         if(sizeOfDirectory >= directorySizeNeededToClear) {
-            calcuateIfSizeIsSmaller(sizeOfDirectory)
+            calculateIfSizeIsSmaller(sizeOfDirectory)
             for (directories in directory.subDirectories) {
                 directorySizeDifference(directories)
             }
         }
     }
 
-    private fun calcuateIfSizeIsSmaller(currentSize : Int){
+    private fun calculateIfSizeIsSmaller(currentSize : Int){
             if(currentSize in directorySizeNeededToClear until smallestSizeNeededToMeetRequirements){
                     smallestSizeNeededToMeetRequirements = currentSize
             }
