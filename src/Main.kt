@@ -1,6 +1,6 @@
 import java.util.Stack
 
-fun main(args : Array<String>){
+suspend fun main(args : Array<String>){
     val dayOne = AdventDay1()
     dayOne.calculateCalories()
     dayOne.calculateTopThreeCalories()
@@ -30,6 +30,11 @@ fun main(args : Array<String>){
     daySeven.generateFileStructure("resources/day_7_instructions.txt")
     daySeven.findLargeFiles()
     daySeven.findDirectoryToClear(70000000,30000000)
+
+    val dayEight = AdventDay8()
+    dayEight.generateGrid("resources/day_8_trees.txt")
+    dayEight.partOneSolution()
+    dayEight.partTwoSolution()
 
 }
 
