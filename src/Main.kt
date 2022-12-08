@@ -26,5 +26,10 @@ fun main(args : Array<String>){
     daySix.tuningTrouble(4)
     daySix.tuningTrouble(14)
 
+    val daySeven = AdventDay7()
+    daySeven.generateFileStructure("resources/day_7_instructions.txt")
+    daySeven.findLargeFiles()
+    daySeven.findDirectoryToClear(70000000,30000000)
+
 }
 
