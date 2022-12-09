@@ -1,15 +1,18 @@
 import java.util.Stack
 
-suspend fun main(args : Array<String>){
+fun main(args : Array<String>){
     val dayOne = AdventDay1()
     dayOne.calculateCalories()
     dayOne.calculateTopThreeCalories()
+
     val dayTwo = AdventDay2()
     dayTwo.firstStrategyGuide()
     dayTwo.secondStrategyGuide()
+
     val dayThree = AdventDay3()
     dayThree.partOneRucksacks()
     dayThree.partTwoRucksacks()
+
     val dayFour = AdventDay4()
     dayFour.CleanupOverlapOne()
 
