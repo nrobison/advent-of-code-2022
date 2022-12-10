@@ -44,5 +44,11 @@ fun main(args : Array<String>){
     dayNine.clearOldData()
     dayNine.partTwo("resources/day_9_input.txt")
 
+    val dayTen = AdventDay10()
+    dayTen.partOne("resources/day_10_input.txt")
+    dayTen.clearData()
+    dayTen.partTwo("resources/day_10_input.txt")
+
+
 }
 
