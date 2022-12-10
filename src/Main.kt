@@ -39,5 +39,10 @@ fun main(args : Array<String>){
     dayEight.partOneSolution()
     dayEight.partTwoSolution()
 
+    val dayNine = AdventDay9()
+    dayNine.partOne("resources/day_9_input.txt")
+    dayNine.clearOldData()
+    dayNine.partTwo("resources/day_9_input.txt")
+
 }
 
