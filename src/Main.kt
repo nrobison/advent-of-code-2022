@@ -1,5 +1,3 @@
-import java.util.Stack
-
 fun main(args : Array<String>) {
     val dayOne = AdventDay1()
     dayOne.calculateCalories()
@@ -55,6 +53,10 @@ fun main(args : Array<String>) {
     dayEleven.clearData()
     dayEleven.loadMonkeys("resources/day_11_monkeys.txt")
     dayEleven.solution(10000, 1)
+
+    val dayTwelve = AdventDay12()
+    dayTwelve.solution("resources/day_12_map.txt")
+
 
 }
 

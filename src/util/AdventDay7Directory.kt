@@ -1,5 +1,7 @@
 package util
 
+import data.Advent7File
+
 class AdventDay7Directory(directoryName : String, previousDirectory: AdventDay7Directory? = null ) {
     val path = directoryName
     var diskSize = 0
@@ -16,7 +18,7 @@ class AdventDay7Directory(directoryName : String, previousDirectory: AdventDay7D
         return totalSize
     }
 
-    fun addFile(newFileToAdd : Advent7File ){
+    fun addFile(newFileToAdd : Advent7File){
         fileList.add(newFileToAdd)
         diskSize += newFileToAdd.fileSize
     }

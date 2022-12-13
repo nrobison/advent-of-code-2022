@@ -1,4 +1,4 @@
-import util.Advent7File
+import data.Advent7File
 import util.AdventDay7Directory
 import java.io.File
 import java.io.InputStream
