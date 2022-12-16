@@ -57,6 +57,12 @@ fun main(args : Array<String>) {
     val dayTwelve = AdventDay12()
     dayTwelve.solution("resources/day_12_map.txt")
 
+    val dayFourteen = AdventDay14()
+    dayFourteen.generateInput("resources/day_14_rocks.txt",false)
+    dayFourteen.solutionOne()
+    dayFourteen.resetValues()
+    dayFourteen.generateInput("resources/day_14_rocks.txt",true)
+    dayFourteen.solutionTwo()
 
 }
 
